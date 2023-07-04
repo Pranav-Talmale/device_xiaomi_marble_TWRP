@@ -78,6 +78,11 @@ PRODUCT_PACKAGES += \
 
 TWRP_REQUIRED_MODULES += miui_prebuilt
 
+#TWRP Decryption
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
+
 # Hack for copying dummy dtb
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/prebuilt/marble/dtb.img:$(TARGET_COPY_OUT)/dtb.img

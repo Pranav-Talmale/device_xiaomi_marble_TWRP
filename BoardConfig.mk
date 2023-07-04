@@ -81,7 +81,8 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := false
 
 TARGET_FORCE_PREBUILT_KERNEL := true
 
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/marble/kernel
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/marble/dtbo.img
 
 #A/B
 AB_OTA_UPDATER := true
@@ -196,7 +197,7 @@ TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_APEX := true
 TW_HAS_EDL_MODE := true
 TW_NO_HAPTICS := true
-TW_LOAD_VENDOR_MODULES := "xiaomi_touch.ko adsp_loader_dlkm.ko qti_battery_charger.ko exfat.ko"
+TW_LOAD_VENDOR_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/marble/modules/1.1/*.ko)
 # TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone20/temp" 
 TW_BATTERY_SYSFS_WAIT_SECONDS := 5
 TW_BACKUP_EXCLUSIONS := /data/fonts

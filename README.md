@@ -22,3 +22,8 @@ It was announced & released on March 2023.
 |                  Camera | 64MP (Primary), 8MP (Ultra-wide), 2MP (Macro)                      |
 
 ![Redmi Note 12 Turbo](https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1679982565.12241762.png)
+
+Lunch command :
+```
+lunch twrp_marble-eng && mka recoveryimage
+```

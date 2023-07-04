@@ -77,3 +77,7 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 TWRP_REQUIRED_MODULES += miui_prebuilt
+
+# Hack for copying dummy dtb
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/prebuilt/marble/dtb.img:$(TARGET_COPY_OUT)/dtb.img
